@@ -12,5 +12,20 @@
         });
         
     </script>
+    <ui id my-list> 
+    </ui>
+    <textarea id="item"></textarea>
+    <button id= add-data> 
+    
+        <script> 
+
+            const addDataBtn = document.getElementById('add-data');
+            const List = document.getElementById('my-list');
+            addDataBtn.addEventListener('click',() =>{
+                const newItem = document.createElement('li');
+                newitem.innerText = document.getElementById('item').value
+                    });
+        </script>
+    </button>
 </body>
 </html>
