@@ -12,20 +12,21 @@
         });
         
     </script>
-    <ul id my-list> 
+    <ul id="my-list">
     </ul>
     <textarea id="item"></textarea>
-    <button id= add-data> 
+    <button id= add-data>  "New item" </button>
     
         <script> 
 
             const addDataBtn = document.getElementById('add-data');
-            const List = document.getElementById('my-list');
+            const list = document.getElementById('my-list');
             addDataBtn.addEventListener('click',() =>{
                 const newItem = document.createElement('li');
-                newitem.innerText = document.getElementById('item').value
+                newitem.innerText = document.getElementById('item').value;
+                list.appendChild(newItem);
                     });
         </script>
-    </button>
+  
 </body>
 </html>
