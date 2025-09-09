@@ -10,7 +10,7 @@
 
     <ul id = "my-list"></ul>
     <button type= "button" id="add-data">Add item</button>
-    <!-- <textarea id="item" placeholder="New item"></textarea><br> -->
+    <textarea id="item" placeholder="New item"></textarea><br>
 
     <script>
 
@@ -29,9 +29,9 @@
             const addDataButton = document.getElementById("add-data")
             addDataButton.addEventListener('click',function() {
                 const myList = document.getElementById("my-list")
-                const data = "Data"
+                const data = document.getElementById("item")
                 const newItem = document.createElement("li");
-                newItem.textContent = data
+                newItem.textContent = data.value
                 myList.appendChild(newItem);
 
             
