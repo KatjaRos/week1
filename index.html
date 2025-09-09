@@ -6,17 +6,39 @@
 
 
     <h1 id="header">Hello world</h1>
-    <button id="my-button"></button>
+    <button id="my-button">Button</button>
+
+    <ul id = "my-list"></ul>
+    <button type= "button" id="add-data">Add item</button>
+    <!-- <textarea id="item" placeholder="New item"></textarea><br> -->
+
     <script>
 
 
-initializeCode();
-function initializeCode(){
-    const myButton = document.getElementById("my-button")
-    myButton.addEventListener('click', function() {
-            console.log('Hello world');
-            header.innerText = 'Moi maailma';
-        });
+        initializeCode();
+        function initializeCode(){
+            const myButton = document.getElementById("my-button")
+            myButton.addEventListener('click', function() {
+                    console.log('Hello world');
+                    header.innerText = 'Moi maailma';
+
+                });
+        addData();
+        function addData(){
+            
+            const addDataButton = document.getElementById("add-data")
+            addDataButton.addEventListener('click',function() {
+                const myList = document.getElementById("my-list")
+                const data = "Data"
+                const newItem = document.createElement("li");
+                newItem.textContent = data
+                myList.appendChild(newItem);
+
+            
+                // got help from here:https://www.w3docs.com/learn-html/html-textarea-tag.html
+
+            })
+        }
 }</script>
 
 </body>
